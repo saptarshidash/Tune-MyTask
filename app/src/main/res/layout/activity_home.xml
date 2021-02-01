@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home_activity"
+        style="@style/ToolbarHomeActivity"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:id="@+id/textview_display_name"
+            style="@style/HomeActivityTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="17dp"
+            android:text="Hi, User"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+        android:id="@+id/collapsible_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_home_activity"
+        app:buttonLeft_drawableTintColor="@android:color/white"
+        app:buttonRight_drawableTintColor="@android:color/white"
+        app:expandIconColor="@android:color/white"
+        app:primaryColor="@color/theme_pink"
+        app:selectedItem_background="@drawable/circle_white_solid_background"
+        app:selectedItem_textColor="@color/theme_pink"
+        app:textColor="@android:color/white"
+        app:todayItem_background="@drawable/circle_white_stroke_background"
+        app:todayItem_textColor="@android:color/white">
+
+    </com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/child_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/collapsible_calendar"
+    tools:context=".views.home.HomeActivity">
+
+
+    <ImageView
+        android:id="@+id/imageview_home_bg"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/img_home_bg1"/>
+
+    <TextView
+        android:id="@+id/textview_nothing_todo"
+        style="@style/HomeActivityTextViews.NothingTodoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_home_bg"
+        android:text="@string/textview_notask_title"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/actionbutton_create_newtask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:fabCustomSize="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onCreateTaskButtonClicked"
+        android:src="@drawable/ic_btn_floating"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_task_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

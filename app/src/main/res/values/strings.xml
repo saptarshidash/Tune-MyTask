@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Tune-MyTask</string>
+
+    <string name="nameerror">Enter a valid name</string>
+    <string name="emailerror">Enter a valid email</string>
+    <string name="mobileerror">Enter a valid mobile</string>
+    <string name="dateerror">Enter a valid date</string>
+    <string name="passerror">Password must contain atleast 8 characters, one letter and one number</string>
+    <string name="confpasserror">Password dont match</string>
+    <string name="emptypasserr">Password can;t be empty</string>
+
+    <string name="button_login_text">Log in</string>
+    <string name="button_signup_text">Sign up</string>
+    <string name="button_save_task">Save</string>
+
+    <string name="hint_edittext_name">Enter Name</string>
+    <string name="hint_edittext_email">Enter Email</string>
+    <string name="hint_edittext_password">Enter Password</string>
+    <string name="hint_edittext_confirm_password">Confirm Password</string>
+    <string name="hint_edittext_task_title">Task title</string>
+    <string name="hint_edittext_add_task_desc">Task description</string>
+
+    <string name="textview_notask_title">Nothing todo 😀</string>
+    <string name="textview_login_here">Login here</string>
+    <string name="textview_already_registered">Already registered?</string>
+    <string name="textview_choose_timing">Date and time</string>
+
+
+</resources>

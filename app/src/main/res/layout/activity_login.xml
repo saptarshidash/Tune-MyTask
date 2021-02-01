@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_activity"
+    tools:context=".views.auth.LoginActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/ic_app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/SmallTextViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="9dp"
+        android:text="to tune your tasks"
+        android:textColor="@color/light_dark2"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_login_title"
+        app:layout_constraintStart_toEndOf="@+id/textview_login_title"
+        app:layout_constraintTop_toTopOf="@+id/textview_login_title" />
+
+    <TextView
+        android:id="@+id/textview_login_title"
+        style="@style/LargeTextViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/input_layout_email"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_email"
+        android:text="Login"
+        android:textColor="@color/theme_pink"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="130dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittext_email"
+            style="@style/RoundEditText.RoundEditTextEmail"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:translationY="3dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="3dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_email">
+
+        <EditText
+            android:id="@+id/edittext_password"
+            style="@style/RoundEditText.RoundEditTextPassword"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:translationY="3dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button_login"
+        style="@style/RoundButton.RoundLoginButton"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_password" />
+
+    <TextView
+        android:id="@+id/textview_not_registered"
+        style="@style/SmallTextViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="Not registered?"
+        app:layout_constraintEnd_toStartOf="@+id/textview_register_here"
+        app:layout_constraintStart_toStartOf="@+id/button_login"
+        app:layout_constraintTop_toTopOf="@+id/textview_register_here" />
+
+
+    <TextView
+        android:id="@+id/textview_register_here"
+        style="@style/SmallTextViews.ClickableTextViewForLoginSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=" Register here"
+        app:layout_constraintStart_toEndOf="@+id/textview_not_registered"
+        app:layout_constraintTop_toBottomOf="@+id/button_login" />
+</androidx.constraintlayout.widget.ConstraintLayout>

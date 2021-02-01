@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TuneMyTask" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/theme_pink</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#e91e63</item>
+        <item name="colorPrimaryDark">#e91e63</item>
+        <item name="colorAccent">#e91e63</item>
+    </style>
+
+    <!-- Button styles in login and registration activity -->
+    <style name="RoundButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/light_white2</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:background">@drawable/btn_round</item>
+    </style>
+    <!-- Child styles of RoundButton style -->
+    <style name="RoundButton.RoundLoginButton">
+        <item name="android:text">@string/button_login_text</item>
+    </style>
+
+    <style name="RoundButton.RoundSignupButton">
+        <item name="android:text">@string/button_signup_text</item>
+    </style>
+
+    <style name="RoundButton.SaveButton">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- EditText styles -->
+    <style name="RoundEditText">
+        <item name="android:background">@drawable/edtext_round</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="TransparentEditText">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColorHint">@color/light_dark1</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+
+    <style name="TransparentEditText.TransparentEditTextTaskTitle">
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="TransparentEditText.TransparentEditTextTaskDesc">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="RoundEditText.RoundEditTextName">
+        <item name="android:drawableLeft">@drawable/ic_user_icon</item>
+        <item name="android:hint">@string/hint_edittext_name</item>
+    </style>
+
+    <style name="RoundEditText.RoundEditTextEmail">
+        <item name="android:background">@drawable/edtext_round</item>
+        <item name="android:drawableLeft">@drawable/ic_user_email</item>
+        <item name="android:hint">@string/hint_edittext_email</item>
+    </style>
+
+    <style name="RoundEditText.RoundEditTextPassword">
+        <item name="android:drawableLeft">@drawable/ic_user_password</item>
+        <item name="android:hint">@string/hint_edittext_password</item>
+    </style>
+
+    <!-- TextView styles in login registration screen -->
+    <style name="LargeTextViews">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:textColor">@color/light_dark2</item>
+    </style>
+    <style name="SmallTextViews">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/light_dark1</item>
+    </style>
+
+    <style name="SmallTextViews.ClickableTextViewForLoginSignup">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/theme_pink</item>
+    </style>
+
+    <!-- Home Activity styles -->
+    <style name="ToolbarHomeActivity">
+        <item name="android:background">@color/theme_pink</item>
+    </style>
+
+    <style name="HomeActivityTextViews">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+    <style name="HomeActivityTextViews.NothingTodoTextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/light_dark3</item>
+    </style>
+
+</resources>

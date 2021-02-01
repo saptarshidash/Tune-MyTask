@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "65869401212",
+    "project_id": "tune-mytask",
+    "storage_bucket": "tune-mytask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65869401212:android:b84f5b13cc0e3f5a654df9",
+        "android_client_info": {
+          "package_name": "com.saptarshi.tunemytask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65869401212-8fm8qvefao2835iv1ihcbfqplotr9l2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3QlR6ZNXSQ32jJqvyH8xmfYW1HP2wkTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65869401212-8fm8qvefao2835iv1ihcbfqplotr9l2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

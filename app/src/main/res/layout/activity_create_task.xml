@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_activity"
+    tools:context=".views.addtask.CreateTaskActivity">
+
+    <Button
+        android:id="@+id/save_button"
+        style="@style/RoundButton.SaveButton"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onSaveButtonClicked"
+        android:text="SAVE"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sub_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/add_tasktitle"
+            style="@style/TransparentEditText.TransparentEditTextTaskTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:hint="@string/hint_edittext_task_title"
+            app:layout_constraintStart_toStartOf="@id/sub_layout1"
+            app:layout_constraintTop_toTopOf="@id/sub_layout1" />
+
+        <EditText
+            android:id="@+id/task_short_detail"
+            style="@style/TransparentEditText.TransparentEditTextTaskDesc"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="32dp"
+            android:hint="@string/hint_edittext_add_task_desc"
+            app:layout_constraintStart_toStartOf="@id/sub_layout1"
+            app:layout_constraintTop_toBottomOf="@+id/add_tasktitle" />
+
+        <ImageView
+            android:id="@+id/details_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/task_short_detail"
+            app:layout_constraintTop_toTopOf="@+id/task_short_detail"
+            android:src="@drawable/ic_task_desc"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_task_time"
+            app:layout_constraintStart_toStartOf="@+id/details_ic"
+            app:layout_constraintTop_toTopOf="@+id/textview_select_timing" />
+
+        <TextView
+            android:id="@+id/textview_select_timing"
+            style="@style/SmallTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="45dp"
+            android:onClick="onSelectTimingTextViewClicked"
+            android:text="@string/textview_choose_timing"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/task_short_detail" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_task_priority"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/spinner_select_priority" />
+
+        <ImageView
+            android:id="@+id/imageview_task_alerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_task_alerm"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/switch_title" />
+
+        <TextView
+            android:id="@+id/switch_title"
+            style="@style/SmallTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Notification alarm"
+            app:layout_constraintStart_toStartOf="@+id/spinner_select_priority"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_select_priority" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_task_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_select_priority"
+            app:layout_constraintTop_toTopOf="@+id/switch_title" />
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spinner_select_priority"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@+id/textview_select_timing"
+            app:layout_constraintTop_toBottomOf="@+id/textview_select_timing"
+            app:smsp_floatingLabelColor="@color/light_dark1"
+            app:smsp_floatingLabelText="Priority selected"
+            app:smsp_hint="Select priority"
+            app:smsp_hintColor="@color/light_dark1"
+            app:smsp_hintSize="17sp"
+            app:smsp_itemColor="@color/light_dark1"
+            app:smsp_itemListColor="@color/light_dark1"
+            app:smsp_itemListHintBackgroundColor="@color/theme_pink"
+            app:smsp_itemListHintColor="#FFFFFF"
+            app:smsp_itemSize="17sp"
+            app:smsp_multilineError="false"
+            app:smsp_selectedItemListColor="#FF5252"
+            app:smsp_underlineColor="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

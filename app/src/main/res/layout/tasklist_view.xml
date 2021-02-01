@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/task_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/light_white1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/task_title"
+                style="@style/SmallTextViews"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="This is sample title"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/task_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/poppins"
+                android:text="10:20 PM"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/task_title"
+                app:layout_constraintTop_toBottomOf="@id/expand_text_view" />
+
+            <TextView
+                android:id="@+id/task_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/view_round"
+                android:fontFamily="@font/poppins"
+                android:padding="7dp"
+                android:text="Very High"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/task_recycler_menu"
+                app:layout_constraintTop_toTopOf="@+id/task_title" />
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                android:id="@+id/expand_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                app:animDuration="200"
+                app:layout_constraintStart_toStartOf="@+id/task_title"
+                app:layout_constraintTop_toBottomOf="@+id/task_title"
+                app:maxCollapsedLines="1">
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="This is the text description that"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="16dp" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+            <TextView
+                android:id="@+id/task_recycler_menu"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="\u0020\u0020&#8942;"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="#424242"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/task_title" />
+
+            <View
+                android:id="@+id/marker_line"
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/divider_horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageview_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_notification"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/task_priority"
+                app:layout_constraintTop_toTopOf="@+id/task_time" />
+
+            <TextView
+                android:id="@+id/textview_alarm_status"
+                style="@style/SmallTextViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_notification"
+                app:layout_constraintTop_toTopOf="@+id/imageview_notification" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
