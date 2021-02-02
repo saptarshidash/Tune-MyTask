@@ -155,7 +155,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
   @Override
   public void onTaskDeleted(String message) {
     if (taskList.size() != 0) {
-      taskList.remove(menuPos);
+//      taskList.remove(menuPos);
       notifyDataSetChanged();
       toast(context, message);
     } else {
